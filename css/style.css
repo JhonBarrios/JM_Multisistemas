@@ -1,0 +1,1274 @@
+:root {
+    --main-bg-color: #456DA8;
+    --Greypersonalizado: #C4C4C4;
+    --Gris2: #A0A0A0;
+
+    /* Medidas Base */ 
+    --Desktop: 1440px;
+    --iMac: 1280px;
+    --iPad_Pro12: 1024px;
+    --iPad_Pro11: 834px;
+    --iPad_Mini: 744px;
+    --iPhone13: 428px;
+    --Android_Large: 360px;
+
+    /** grid-breakpoints **/
+    --xs: 0;
+    --sm: 480px;
+    --md: 768px;
+    --lg: 1024px;
+
+    /* grid-breakpoints */
+    --xs: 0;
+    --sm: 576px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1200px;
+    --xxl: 1400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('BebasNeue-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+    /*
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+    */
+}
+.row {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    /*
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+    */
+}
+.colorBlack{
+    color: var(--bs-dark) !important;
+}
+.mw{
+    min-width: 45rem;
+}
+
+/**********   ****   **********/
+/**********   MENU   **********/
+/**********   ****   **********/
+.encabezado {
+    border-bottom: 1px solid var(--bs-light);
+    height: 11vh;
+    left: 0px;
+    min-width: var(--Android_Large);
+    top: 0px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#encabezado--logo {
+    height: 10vh;
+    top: 0;
+}
+.encabezado--menu  {
+    background: var(--main-bg-color);
+    /*height: 11vh;*/
+}
+#show {
+    display: contents;
+}
+.encabezado--menu .btn-menu {
+    color: var(--bs-light);
+    cursor: pointer;
+    position: absolute;
+    right: 3.5vw;
+    top: 3.5vh;
+}
+#mostrar-ocultar {
+    align-content: start;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    flex-wrap: wrap;
+    height: 200vh;
+    justify-content: center;
+    left: 0;
+    max-width: 500px;
+    padding: 10px 0 20px 0;
+    position: fixed;
+    top: 11vh;
+    transition: all .5s;
+    width: 60%;
+    z-index: 30;
+}
+#mostrar-ocultar {
+    display: none;
+}
+.pequeño{
+    visibility: visible;
+}
+.grande {
+    visibility: hidden;
+}
+.mostrar-ocultar {
+    align-content: start;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    max-width: 500px;
+    padding: 10px 0 20px 0;
+    position: fixed;
+    top: 11vh;
+    transition: all .5s;
+    width: 60%;
+    z-index: 30;
+}
+.encabezado--menu .lista .list-menu {
+    flex: 1;
+}
+.encabezado--menu a {
+    color: var(--bs-light);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    position: relative;
+}
+.encabezado--menu ul li a:hover:before, .encabezado--menu ul li a:focus:before, .encabezado--menu ul li a:active:before {
+    left: 0;
+    right: 0;
+}
+.encabezado--menu ul li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+#dropdownMenuButton{
+    color: var(--bs-light);
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    position: relative;
+    overflow: hidden;
+}
+#dropdownMenuButton:hover:before, #dropdownMenuButton:focus:before, #dropdownMenuButton:active:before{
+    left: 0;
+    right: 0;
+}
+#dropdownMenuButton:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;}
+.encabezado--menu > ul {
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.encabezado--menu ul li {
+    border-bottom: 1px solid var(--bs-light);
+    margin: 10px 10px 10px 10px;
+    min-width: 100px;
+    text-align: center;
+}
+/* .encabezado--menu ul li a:hover {
+    transition: all .3s;
+} */
+.encabezado--menu ul .redes {
+    border-bottom: none;
+    width: max-content;
+}
+.encabezado--menu ul .redes a {
+    margin: 0px 10px 0px 10px;
+}
+.dropdown-menu.show {
+    display: inline-flex;
+}
+.withpa{
+    padding: 0 !important;
+}
+
+/**********   ********************   **********/
+/**********   SERVICIOS DESTACADOS   **********/
+/**********   ********************   **********/
+.ServiciosDestacados {
+    justify-content: space-around;
+    min-width: var(--Android_Large);
+    position: relative;
+}
+.CardServicios {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--bs-light);
+    min-height: 50vh;
+    min-width: var(--Android_Large);
+    position: relative;
+    z-index: 1;
+}
+.textServicios {
+    background-color: var(--bs-dark);
+    border-top: groove;
+    bottom: 0;
+    color: var(--bs-light);
+    cursor: pointer;
+    margin: 0;
+    padding: 2%;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+/**********   **************   **********/
+/**********   LO QUE HACEMOS   **********/
+/**********   **************   **********/
+.Hacemos {
+    justify-content: space-around;
+    min-width: var(--Android_Large);
+    padding-bottom: 20px;
+    position: relative;
+}
+.CardServicios h3 {
+    font-family: 'Roboto';
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+.degra::after {
+    background: linear-gradient(#ffd3d32a, #626fffc3);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.CardServicios .observacion {
+    bottom: 50px;
+    margin: 0 0 0 1rem;
+    position: absolute;   
+}
+.Titulos {
+    align-items: center;
+    font-size: 3em;
+    font-weight: bolder;
+    padding: 20px 0px;
+    text-align: center;
+}
+.CardServicios:hover {
+    opacity: 90%;
+}
+
+
+/**********   *****************   **********/
+/**********   NUESTROS CLIENTES   **********/
+/**********   *****************   **********/
+.Nuestrosclietnes {
+    min-width: var(--Android_Large);
+    justify-content: center;
+}
+.textcliente {
+    display: inline-flex;
+    line-height: 50px;
+    text-align: center;
+}
+.textcliente h3 {
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 1s;
+}
+.textcliente h3:hover {
+    color: #456DA8;
+    text-decoration: underline;
+    transition: all .5s;
+}
+
+
+
+/**********   ******   **********/
+/**********   SLOGAN   **********/
+/**********   ******   **********/
+.slogan {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--bs-light);
+    height: 40vh;
+    min-width: var(--Android_Large);
+    position: relative;
+    z-index: 1;
+}
+.slogan h1 {
+    /* font-family: "BebasNeue"; */
+    font-size: 2.5em;
+    letter-spacing: 0.05em;
+    line-height: normal;
+    margin: 0;
+    padding-left: 3.5rem;
+    transform: scaleY(1.3);
+}
+.deg::after {
+    /* background: linear-gradient(to left top, #456da834, #456da866, #456da889, #3762ffa5, #3a64fbd5); */
+    /* background: linear-gradient(to left top, transparent, #456DA8); */
+    background: rgb(255,255,255);
+background: linear-gradient(320deg, rgba(255,255,255,0) 15%, rgba(69,109,168,1) 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+/**********   *****************   **********/
+/**********   EQUIPO DE TRABAJO   **********/
+/**********   *****************   **********/
+.equipoTrabajo {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    min-width: var(--Android_Large);
+    position: relative;
+}
+.usuariosEquipo .user {
+     /* border-radius: 50%; */
+    border-radius: 50%;
+    border: 2px dotted #2E88B1;
+    height: 120px;
+}
+.usuariosEquipo .user::after {
+    border-right-width: 30px;
+    content: "";
+}
+/* --- --- CAROUSEL --- --- */
+.carousel {
+    width: 90%;
+}
+.glider-slide img {
+    max-height: 200px;
+    max-width: 80%;
+    border-radius: 50%;
+}
+.carousel__contenedor {
+	position: relative;
+}
+.carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: var(--bs-dark);
+	opacity: 20%;
+}
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+.carousel__anterior {
+	left: -30px;
+}
+.carousel__siguiente {
+	right: -30px;
+}
+.carousel__lista {
+	overflow: hidden;
+}
+.carousel__elemento {
+	text-align: center;
+}
+.carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: var(--bs-dark);
+	opacity: .2;
+	border-radius: 0;
+}
+.carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+.carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+
+
+/**********   **************   **********/
+/**********   CASOS DE EXITO   **********/
+/**********   **************   **********/
+.casosExito {
+    background-color: var(--bs-gray-300);
+    min-width: var(--Android_Large);
+}
+.casosExito h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0 20px 0;
+}
+
+
+/**********   ****   **********/
+/**********   MAPA   **********/
+/**********   ****   **********/
+.Maps {
+    height: 30vh;
+    margin: 0 auto;
+    min-width: var(--Android_Large);
+    text-align: center;
+}
+
+
+/**********   **********************   **********/
+/**********   FOOTER - PIE DE PAGINA   **********/
+/**********   **********************   **********/
+.footer {
+    background-color: var(--bs-dark);
+    color: var(--bs-light);
+    height: max-content;
+    line-height: 20px;
+    min-width: var(--Android_Large);
+    text-align: center;
+}
+.colum p {
+    font-size: 0.9em;
+}
+.color_white {
+    color: var(--bs-light);
+    padding: 5PX;
+}
+.input {
+    background-color: transparent;
+    border-color: var(--bs-light);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+}
+.buttonsend {
+    background-color: var(--bs-gray-400);
+    color: var(--bs-dark);
+}
+
+
+/**********   ***********************   **********/
+/**********   BOTON PARA SUBIR PÁGINA   **********/
+/**********   ***********************   **********/
+#toTop {
+    -moz-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -o-transition: color 300ms, background-color 300ms, opacity 300ms;
+    -webkit-transition: color 300ms, background-color 300ms, opacity 300ms;
+    background: var(--bs-gray-800);
+    border-radius: 10px;
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    padding: 10px 10px 10px 10px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    transition: color 300ms, background-color 300ms, opacity 300ms;
+    width: 40px;
+    z-index: 9;
+}
+#toTop i {
+    color: var(--bs-light);
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+
+
+
+/**********   ******   **********/
+/**********   BANNER   **********/
+/**********   ******   **********/
+.Banner {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--main-bg-color);
+    min-height: 50vh;
+    min-width: var(--Android_Large);
+    position: relative;
+}
+.Banner h1 {
+    font-size: 3em;
+    margin: 0;
+    padding-left: 1.5em;
+}
+
+/**********   **********   **********/
+/**********   SOLUCIONES   **********/
+/**********   **********   **********/
+.SolucionesG {
+    background-position: left;
+    background-repeat: repeat-x;
+    background-size: inherit;
+}
+.colorBlue {
+    color: var(--main-bg-color);
+}
+.backgBlue {
+    background-color: var(--main-bg-color);
+}
+.content {
+    justify-content: center;
+    min-width: var(--Android_Large);
+    position: relative;
+    row-gap: 80px;
+    text-align: -webkit-center;
+    width: 1100px;
+}
+.Card {
+    align-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 35vh;
+    justify-content: space-between;
+    position: relative;
+    width: 30vw;
+}
+.icono {
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60px;
+    justify-content: center;
+    position: absolute;
+    top: -4vh;
+    width: 60px;
+}
+.icono img {
+    height: 40px;
+    width: 40px;
+}
+.textCard{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px 10px;
+    position: relative;
+    top: 7vh;
+}
+
+.iconoDireccion{
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--bs-light);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 30px;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+    width: 30px;
+}
+.Cardimg{
+    bottom: -3vh;
+    position: relative;
+    width: 25vw;
+}
+
+/**********   *********   **********/
+/**********   SERVICIOS   **********/
+/**********   *********   **********/
+.ServiciosGenerales {
+    height: 80vh;
+    position: relative;
+}
+.contentidoServicios{
+    border-radius: 10px;
+    justify-content: center;
+    position: absolute;
+    top: -30px;
+}
+.CardS{
+    align-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    min-height: 25vh;
+    text-align: center;
+    width: 80%;
+}
+.color_white2 {
+    color: var(--bs-light);
+}
+.iconSVGS {
+    width: 70px;
+    height: 70px;
+}
+.Tarjeta {
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+    align-items: center;
+    background-color: var(--bs-light);
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+    color: var(--main-bg-color);
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 35vh;
+    top: -30px;
+    width: 25%;
+}
+.Tarjeta:first-child{
+    border-bottom-left-radius: 10px;
+    border-right: 1px solid var(--main-bg-color);
+    border-top-left-radius: 10px;
+}
+.Tarjeta:last-child{
+    border-bottom-right-radius: 10px;
+    border-left: 1px solid var(--main-bg-color);
+    border-top-right-radius: 10px;
+}
+.Tarjeta:hover {
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    color: var(--bs-light);
+    transform:scale(1.25);
+    transition: all .3s;
+}
+.TextSer{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+/* #alerta{
+    text-align: justify;
+    margin-top:1 0px;
+    display: none;
+} */
+#Servidores{
+    text-align: justify;
+    margin-top:1 0px;
+    display: none;
+}
+#Servidores > img{
+    width: 80%;
+}
+#Soporte{
+    text-align: justify;
+    margin-top:1 0px;
+    display: none;
+}
+#Redes{
+    text-align: justify;
+    margin-top:1 0px;
+    display: none;
+}
+.visible{
+  display: block !important;
+}
+
+
+
+/**********   *****   **********/
+/**********   SOMOS   **********/
+/**********   *****   **********/
+.BannerSomos {
+    background-position: top;
+    min-height: 90vh;
+}
+.Deg{width:100%;height:100%;bottom:0;position:absolute;background:rgba(247,177,166,0.1);background:-moz-linear-gradient(top,rgba(247,177,166,0.1) 0%,rgba(248,93,73,0.1) 0%,rgba(255,255,255,0.1) 0%,rgba(173,193,221,0.1) 42%,rgba(99,136,191,0.69) 80%,rgba(69,109,168,1) 100%);background:-webkit-gradient(left top,left bottom,color-stop(0%,rgba(247,177,166,0.1)),color-stop(0%,rgba(248,93,73,0.1)),color-stop(0%,rgba(255,255,255,0.1)),color-stop(42%,rgba(173,193,221,0.1)),color-stop(80%,rgba(99,136,191,0.69)),color-stop(100%,rgba(69,109,168,1)));background:-webkit-linear-gradient(top,rgba(247,177,166,0.1) 0%,rgba(248,93,73,0.1) 0%,rgba(255,255,255,0.1) 0%,rgba(173,193,221,0.1) 42%,rgba(99,136,191,0.69) 80%,rgba(69,109,168,1) 100%);background:-o-linear-gradient(top,rgba(247,177,166,0.1) 0%,rgba(248,93,73,0.1) 0%,rgba(255,255,255,0.1) 0%,rgba(173,193,221,0.1) 42%,rgba(99,136,191,0.69) 80%,rgba(69,109,168,1) 100%);background:-ms-linear-gradient(top,rgba(247,177,166,0.1) 0%,rgba(248,93,73,0.1) 0%,rgba(255,255,255,0.1) 0%,rgba(173,193,221,0.1) 42%,rgba(99,136,191,0.69) 80%,rgba(69,109,168,1) 100%);background:linear-gradient(to bottom,rgba(247,177,166,0.1) 0%,rgba(248,93,73,0.1) 0%,rgba(255,255,255,0.1) 0%,rgba(173,193,221,0.1) 42%,rgba(99,136,191,0.69) 80%,rgba(69,109,168,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b1a6',endColorstr='#456da8',GradientType=0 );}
+.TextS{
+    background-color: var(--main-bg-color);
+    color: var(--bs-light);
+    padding: 25px 0px;
+}
+.TextSomos{
+    bottom: 30px;
+    color: white;
+    left: 0;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+#InfoSomos{
+    font-size: 1em;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    padding: 0;
+    text-align: justify;
+    text-align: left;
+    width: 60%;
+}
+
+
+
+/**********   ********   **********/
+/**********   CONTACTO   **********/
+/**********   ********   **********/
+.Contactanos{
+    background-repeat: round;
+    /*background-repeat-y: no-repeat;*/
+    background-position-y: center;
+}
+#TextAuto{
+    color: var(--Greypersonalizado);
+    font-weight: 100;
+}
+.formulario{
+    background-color: var(--bs-white);
+    border-radius: 15px;
+    box-shadow: 0 0.15rem 0.55rem 0.35rem rgba(107, 107, 107, 0.25);
+    margin: 3rem 0;
+}
+.Bann{
+    background-size: initial;
+}
+.title{
+    bottom: 140px;
+}
+.sub {
+    bottom: 80px;
+}
+.form-floating>.form-control  {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #C4C4C4;
+}
+.form-check-input.is-invalid, .was-validated .form-check-input:invalid {
+    border-color: var(--Greypersonalizado);
+}
+.form-check-input.is-invalid:checked, .was-validated .form-check-input:invalid:checked {
+    background-color: var(--main-bg-color);
+}
+.form-check-input.is-invalid:focus, .was-validated .form-check-input:invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(78, 53, 220, 0.25);
+}
+
+
+
+/**********   ****   **********/
+/**********   BLOG   **********/
+/**********   ****   **********/
+.Seccionblog {
+    background-color: #F4F4F4;
+    min-height: 20vh;
+    min-width: var(--Android_Large);
+    width: 100%;
+}
+.Cardh1{
+    font-size: 2rem;
+}
+.letrainput::placeholder {
+    color: var(--bs-gray-400);
+    padding: 5%;
+    text-align: left;
+}
+.novedades{
+    background-color: #456DA8;
+    border-radius: 15px;
+    color: var(--bs-light);
+    margin: 0 auto;
+    padding: 10%;
+    text-align: left;
+    width: 80%;
+}
+#bloginput {
+    color: var(--Gris2);
+}
+
+.popular{
+    border-radius: 15px;
+    color: var(--bs-dark);
+    font-weight: lighter;
+    margin: 0 auto;
+    padding: 7%;
+    text-align: left;
+    width: 90%;
+}
+.itemPopular{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.num {
+    flex: 1 1 auto;
+}
+.numero{
+    margin: 0;
+    color: var(--Gris2);
+}
+.textnum {
+    font: caption;
+    font-weight: bold;
+    margin: 0;
+}
+.ver {
+    color: var(--Gris2);
+    flex-direction: row-reverse;
+    font-size: 0.8em;
+}
+.tiempo {
+    color: var(--Gris2);
+    font-size: 0.8em;
+}
+/* estilos para la categoria de la derecha */
+#text-align-justify{
+    text-align: justify;
+}
+.ItemCategoria {
+    background-color: var(--bs-light);
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px 3px rgb(0 0 0 / 20%);
+    min-height: 40vh;
+    overflow: hidden;
+}
+.ImgCategoria{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 30vh;
+    object-fit: cover;
+    object-position: center;
+}
+.ImgCategoria2{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+}
+.morelinks{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+.morelinks> .tiempo{
+    color: var(--Gris2);
+    font-size: 0.8em;
+}
+.morelinks> .ButtonCategoria{
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    color: var(--bs-light);
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+}
+.Blogs {
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 50px;
+}
+/* Id para el destacado */
+#Destacado {
+    flex: 0 0 auto;
+    order: -1;
+    top: 0;
+    width: 90%;
+    /*
+    width: 91.66666667%;
+    */
+}
+
+
+/**********   *********   **********/
+/**********   eCommerce   **********/
+/**********   *********   **********/
+.bg-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: var(--Android_Large);
+}
+.card-body{
+    height: 15vh;
+}
+.Custominvisible{
+    visibility: hidden;
+}
+.CustomHover:hover{
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+}
+.CustomHover:hover>.Custominvisible{
+    visibility: visible;
+}
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+/*** ESTILOS BOTÓN SLIDE BOTTOM ***/
+.ov-btn-slide-bottom {
+    background: #fff; /* color de fondo */
+    color: var(--main-bg-color); /* color de fuente */
+    border: 2px solid var(--main-bg-color); /* tamaño y color de borde */
+    padding: 7px 15px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+.ov-btn-slide-bottom:hover {
+    color: #fff; /* color de fuente hover */
+}
+.ov-btn-slide-bottom::after {
+    content: "";
+    background: var(--main-bg-color); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 7px 15px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.ov-btn-slide-bottom:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.carousel {
+    width: 70%;
+    margin: 0 auto;
+}
+.dropdown-menu {
+    min-width: 3.5rem;
+}
+.dropdown-menu.prod.show {
+    display: inline-flex;
+    flex-direction: column;
+}
+.Precio{
+    font-weight: bold;
+    color: var(--main-bg-color);
+}
+.boxdes {
+    -webkit-box-shadow: 15px 15px 25px 1px rgba(0,0,0,0.25); 
+    box-shadow: 15px 15px 25px 1px rgba(0,0,0,0.25);
+
+    /* -webkit-box-shadow: 8px 8px 25px 0px rgba(128,128,128,0.5); 
+    box-shadow: 8px 8px 25px 0px rgba(128,128,128,0.5); */
+    border-radius: 1.3000000000000007rem;
+}
+
+
+
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+
+
+/***********************************************/
+/**********   WEB DISEÑO RESPONSIVE   **********/
+/***********************************************/
+
+
+/**********   ****   **********/
+/**********   MENU   **********/
+/**********   ****   **********/
+@media (min-width: 992px) {
+    .pequeño{
+        display: none;
+    }
+    .grande {
+        visibility: visible;
+    }
+    .encabezado--menu .btn-menu {
+        display: none;
+    }
+    .encabezado--menu #mostrar-ocultar {
+        align-content: center;
+        display: flex;
+        height: 11vh;
+        justify-content: space-evenly;
+        max-width: 100%;
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .encabezado--menu .mostrar-ocultar {
+        align-content: center;
+        display: flex;
+        height: 11vh;
+        justify-content: space-evenly;
+        max-width: 100%;
+        position: relative;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+    .encabezado--menu ul li {
+        display: contents;
+    }
+    .encabezado--menu ul .redes {
+        display: table;
+        text-align-last: end;
+        width: 400px;
+    }
+}
+@media (max-width: 992px) {
+    .dropend> .dropdown-menu.show {
+        display: block !important;
+    }
+    .dropend> .mw{
+        min-width: 10rem;
+    }
+    .encabezado--menu ul .redes a {
+        margin: 10px 6px 0px 6px;
+    }
+}
+
+
+/**********   **************   **********/
+/**********   LO QUE HACEMOS   **********/
+/**********   **************   **********/
+@media (min-width: 992px) {
+    .Titulos {
+        padding: 40px 0px;
+    }
+}
+
+
+/**********   *****************   **********/
+/**********   NUESTROS CLIENTES   **********/
+/**********   *****************   **********/
+@media (min-width: 992px) {
+    .text1, .text2 {
+        display: inline-flex;
+        justify-content: space-around;
+        position: relative;
+    }
+}
+
+
+/**********   ******   **********/
+/**********   SLOGAN   **********/
+/**********   ******   **********/
+@media (min-width: 992px) { 
+    .slogan {
+        height: 60vh;
+    }
+
+    .slogan h1 {
+        font-size: 3.5em;
+    }
+}
+
+
+/**********   **********   **********/
+/**********   SOLUCIONES   **********/
+/**********   **********   **********/
+@media (min-width: 0px) {
+    .Banner h1 {
+        padding-left: 1em;
+    }
+    .Deg .TextSomos{
+        padding-left: 0px;
+    }
+    .Card {
+        width: 60vw;
+    }
+    .Cardimg{
+        width: 50vw;
+    }
+}
+@media (min-width: 480px) {
+    .Card {
+        width: 40vw;
+    }
+    .Cardimg{
+        width: 35vw;
+    }
+}
+@media (min-width: 630px) {
+    .Banner h1 {
+        padding-left: 2em;
+    }
+    .Card {
+        width: 30vw;
+    }
+    .Cardimg{
+        width: 25vw;
+    }
+}
+@media (min-width: 992px) {
+    .Card {
+        width: 17vw;
+    }
+    .Cardimg{
+        width: 15vw;
+    }
+}
+
+
+/**********   *********   **********/
+/**********   SERVICIOS   **********/
+/**********   *********   **********/
+
+@media (max-width: 630px) {
+    .ServiciosGenerales {
+        height: auto;
+        padding: 30px 0px;
+        position: relative;
+    }
+    .contentidoServicios {
+        border-radius: 10px;
+        justify-content: center;
+        position: relative;
+        top: 10px;
+    }
+    .Tarjeta {
+        -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+        -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+        align-items: center;
+        background-color: var(--bs-light);
+        border-radius: 10px;
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.29);
+        color: var(--main-bg-color);
+        margin-bottom: 30px;
+        min-height: 30vh;
+        width: 60%;
+    }
+    .Tarjeta:first-child {
+        border-right: 1px solid var(--bs-light);
+    }
+    .Tarjeta:last-child {
+        border-left: 1px solid var(--bs-light);
+    }
+}
+
+/**********   *****   **********/
+/**********   SOMOS   **********/
+/**********   *****   **********/
+@media (max-width: 630px) {
+    #InfoSomos{
+        font-size: 1.2em;
+        width: 80%;
+        text-align: justify;
+        margin: 0 auto;
+        line-height: 1.5rem;
+    }
+}
+
+/**********   ********   **********/
+/**********   CONTACTO   **********/
+/**********   ********   **********/
+@media (max-width: 630px) {
+    .title{
+        bottom: 190px;
+    }
+    .sub {
+        bottom: 90px;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+/**********   ****   **********/
+/**********   BLOG   **********/
+/**********   ****   **********/
+@media (max-width: 576px) {
+    #Destacado{
+        width: 100%;
+    }
+}
+
+/**********   *********   **********/
+/**********   eCommerce   **********/
+/**********   *********   **********/
+
+
+@media (max-width: 576px) {
+    .alturabds{
+        height: 75% !important;
+    }
+}

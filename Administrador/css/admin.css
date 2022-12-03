@@ -1,0 +1,174 @@
+:root {
+  /* Colores Primarios */
+  --black: black;
+  --white: white;
+  --blue: blue;
+  --green: green;
+  /* Colores Personalizados */
+  --font-family-style: 'Acme', sans-serif;
+  /* Colores para los Bg */
+  --bg-color_color-primary: #054f63;
+  --bg-color_color-primary-hover: rgba(51, 122, 183, 0.4);
+  --bg-color-dropdown-menu: rgba(5, 79, 99, 0.6);
+  --bg-color-id-container: aliceblue;
+  --bg-color_input-contact: rgb(143, 201, 216);
+  --bg-color_btt-enviar-hover: rgba(0,0,255,0.6);
+  --bg-color_list-number: darkblue;
+  --bg-color_list-number-hover: rgb(172, 172, 224);
+  --bg-color-btt-adm: #42742F;
+  --bg-color-btt-adm-hover: #7FAE4A;
+  --bg-color_footer: #23252A;
+  /* Colores para letras */
+  --color-primary-green: rgb(56, 87, 35);
+  --color-transparent-6: rgba(0, 0, 0, .6);
+  --color-border: #aaaaaa;
+}
+
+/* Estilos generales para el perfil de administrador */
+.navbar-color {
+  background-color: var(--bg-color_color-primary);
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--white);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: grey;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: var(--white);
+}
+
+.dark-mode .navbar-light {
+  background-color: var(--bg-color_color-primary);
+}
+
+.main-header {
+  border: none;
+}
+
+[class*=sidebar-dark-] {
+  /* background-color: #343a40; */
+  background-color: var(--bg-color_color-primary);
+}
+
+.padd {
+  padding-right: 10px;
+}
+
+.nav-treeview {
+  padding-left: 10px !important;
+}
+
+.main-sidebar {
+  width: 253px;
+}
+
+/* Estilos para la tabla de administrador */
+.tabla-administrador {
+  display: table;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 800px;
+}
+
+.tabla-administrador-peq {
+  width: 100%;
+}
+
+.tabla-administrador th, td {
+   border: 1px solid #000;
+   text-align: center;
+   width: 20%;
+}
+
+#actualizar {
+  width: 50px;
+}
+
+.tabla-administrador input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.tabla-administrador input:focus {
+  background-color: var(--bg-color-dropdown-menu);
+  color: var(--white);
+}
+
+.tabla-administrador button {
+  border: none;
+  width: 100%;
+}
+
+.form__text {
+  margin-top: 20px;
+}
+
+/* Estilo para Modificar Junta */
+.textM {
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+#linka {
+  text-decoration: none;
+  color:  var(--primary);
+}
+
+#linka:hover {
+  color: var(--White);
+}
+
+.p-17 {
+  padding: 5px !important;
+  min-width: 1%;
+  max-width: 10%;
+}
+
+.table,
+.table th {
+  border: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.table-custom {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.table-custom tr td {
+  vertical-align: middle;
+}
+
+.table-personalizada-blue {
+  background-color: #B9B2FE;
+}
+
+.table-personalizada-red th {
+  border: 1px solid #ed969e !important;
+  border-bottom: 2px solid #ed969e !important;
+}
+
+body.sidebar-mini.sidebar-collapse> div.wrapper> aside.main-sidebar.sidebar-dark-primary.elevation-4> a.brand-link> img.brand-image {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  width: 100%;
+  max-width: 54px;
+  transition: all .3s;
+}
+
+/* Para Mobile S - 320px */
+@media (max-width: 525px) {
+  .ocultar {
+    display: none;
+  }
+}
