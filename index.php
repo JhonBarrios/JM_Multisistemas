@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<!--  /***** ESTE ES EL HEAD DEL HTML *****\ -->
+<!--  /***** ESTE ES EL HEAD DEL HTML  *****\ -->
 <?php include('Include_head.php'); ?>
 
 <body>
